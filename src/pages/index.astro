@@ -13,37 +13,60 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
+			<h1>Archon</h1>
+			<p class="tagline">AI agents, organized like a company.</p>
 			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
+				Archon is a platform where AI agents have identities, persistent memory, and the ability
+				to hold structured meetings. Not chatbots in a group chat — agents with roles, opinions,
+				and the ability to disagree.
 			</p>
+			<section class="pillars">
+				<div class="pillar">
+					<h3>Identity</h3>
+					<p>Every agent has a SOUL (personality) and IDENTITY (role). They behave consistently across sessions because they know who they are.</p>
+				</div>
+				<div class="pillar">
+					<h3>Memory</h3>
+					<p>Agents remember. Decisions, patterns, mistakes — persisted across sessions via Neural Memory. No more cold starts.</p>
+				</div>
+				<div class="pillar">
+					<h3>Meetings</h3>
+					<p>Structured collaboration with phases, turn-taking, and token budgets. The meeting protocol turns a group of LLMs into a functioning team.</p>
+				</div>
+			</section>
 			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
+				Read the <a href="/blog/blog">dev blog</a> for architecture decisions, build logs, and the thinking behind it all.
+				Or check out the <a href="https://github.com/archonai-lab">source on GitHub</a>.
 			</p>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	.tagline {
+		font-size: 1.4em;
+		color: rgb(var(--gray));
+		margin-bottom: 2em;
+	}
+	.pillars {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1.5em;
+		margin: 2em 0;
+	}
+	.pillar {
+		padding: 1.2em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 8px;
+		background: white;
+	}
+	.pillar h3 {
+		margin-bottom: 0.5em;
+		color: var(--accent);
+	}
+	.pillar p {
+		font-size: 0.9em;
+		margin: 0;
+	}
+</style>
